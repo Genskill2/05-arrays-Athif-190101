@@ -37,5 +37,23 @@ return s;
 }
 
 int mode(int a[],int n)
-{
-  
+{int x,l=0;
+ int ar[],br[];
+  for(int i=0;i<n;i++)
+  {x=ar[i];
+    for(int j=i+1 j<n;j++)
+     {if(x==ar[j])
+        l++;
+      x=ar[i];
+      l=br[i];
+  }
+  }
+   int s=br[0],n;
+  for(i=0;i<n;i++)
+     {if(s<br[i])
+        s=br[i];
+        n=i
+     }
+     return ar[n];
+}
+  }
