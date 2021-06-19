@@ -57,3 +57,54 @@ int mode(int a[],int n)
      return ar[n];
 }
   }
+
+  int factor(int n,int ar[])
+   {int flag=0,i,j,k=0,y=0,num,l=2;
+    num=n;
+    for(k=0;k<=num;k++)
+     {
+   for (i = 2; i <= n; ++i) 
+   {   
+        if (n % i == 0) 
+        {
+         for (j = 2; j <= i / 2; ++j) 
+         {
+         if (i % j == 0) 
+         {
+            flag = 1;
+              break;
+         }
+     }
+
+  if (n == 1) 
+  {
+    ar[k]=n;
+    break;
+  } 
+  else 
+  {
+    if (flag == 0)
+    {
+      n=n/i;
+       ar[k]=i;
+       y++;
+       for(l=2;l<=n;l++)
+       {
+       if(n%l==0)
+        {n=n/l;
+         k++;
+         ar[k]=l;
+         y++;
+        }
+      l=2;
+    } 
+ }
+      else
+      continue;
+  }
+
+        }
+    }
+   }
+   return y;
+   }
